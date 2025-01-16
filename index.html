@@ -12,23 +12,36 @@
             padding: 20px;
             background-color: #f8f8f8;
             color: #333;
+            /* overflow: hidden; */
+            background-image: url('your-long-image.jpg');
+            background-repeat: repeat-y;
+            background-size: cover;
+            animation: scrollBackground 40s linear infinite;
+        }
+
+        @keyframes scrollBackground {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 -100%; }
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 30px;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.85);
             border-radius: 15px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         h1 {
             color: #ff0050;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: bold;
         }
         p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #666;
+            font-size: 20px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
         }
         img {
             width: 250px;
@@ -47,18 +60,32 @@
             background-color: #f0f0f0;
             border-radius: 10px;
         }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #ff0050;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #e60045;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Save TikTok</h1>
-        <p>our team is committed to saving TikTok from the US government,your support will be crucial to the vitory of our mission.
-        </p>
-        </p>
+        <h1>Join the Movement to Save TikTok!</h1>
+        <p>We are dedicated to preserving TikTok as a platform for creativity and expression. Your support is vital in our fight against censorship and for the freedom of digital expression.</p>
         <img src="qr.jpg" alt="Support QR Code">
         <div class="social-info">
-            <p>for more information</p>
-            <p>your support is the key to our success</p>
+            <p>Stay informed and get involved!</p>
+            <p>Your contribution can make a difference in this crucial moment.</p>
+            <a href="#" class="button">Get Involved</a>
         </div>
     </div>
 </body>
