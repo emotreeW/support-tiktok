@@ -76,16 +76,28 @@
             background-color: #e60045;
         }
     </style>
+    <script>
+        async function getInvolved() {
+            const response = await fetch('http://127.0.0.1:5000/get_involved');
+            const data = await response.json();
+            
+            if (response.ok) {
+                alert(data.message + " Total participants: " + data.total);
+            } else {
+                alert(data.message);
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Join the Movement to Save TikTok!</h1>
-        <p>We are dedicated to preserving TikTok as a platform for creativity and expression. Your support is vital in our fight against censorship and for the freedom of digital expression.</p>
+        <p>We are dedicated to preserving a new TikTok as a platform for creativity and expression. Your support is vital in our fight against censorship and for the freedom of digital expression.</p>
         <img src="qr.jpg" alt="Support QR Code">
         <div class="social-info">
             <p>Stay informed and get involved!</p>
             <p>Your contribution can make a difference in this crucial moment.</p>
-            <a href="#" class="button">Get Involved</a>
+            <a href="#" class="button" onclick="getInvolved()">Get Involved</a>
         </div>
     </div>
 </body>
